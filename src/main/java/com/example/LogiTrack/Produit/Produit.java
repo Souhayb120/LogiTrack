@@ -1,20 +1,43 @@
 package com.example.LogiTrack.Produit;
 
+import com.example.LogiTrack.ligneCommande.LigneCommande;
+import jakarta.persistence.*;
+
+import java.util.List;
+
+
+@Entity
+@Table(name = "produit")
 public class Produit {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nom;
     private String categorie;
     private double prix;
     private int quantiteStock;
 
+
+    @OneToMany(mappedBy = "produit")
+    private List<LigneCommande> ligneCommandes;
+
     public Produit() {
     }
 
-    public Produit(String nom, String categorie, double prix, int quantiteStock) {
+    public Produit(String nom, String categorie, double prix, int quantiteStock, List<LigneCommande> ligneCommandes) {
         this.nom = nom;
         this.categorie = categorie;
         this.prix = prix;
         this.quantiteStock = quantiteStock;
+        this.ligneCommandes = ligneCommandes;
+    }
+
+    public List<LigneCommande> getLigneCommandes() {
+        return ligneCommandes;
+    }
+
+    public void setLigneCommandes(List<LigneCommande> ligneCommandes) {
+        this.ligneCommandes = ligneCommandes;
     }
 
     public Produit(int id, String nom, String categorie, double prix, int quantiteStock) {
@@ -24,6 +47,8 @@ public class Produit {
         this.prix = prix;
         this.quantiteStock = quantiteStock;
     }
+
+
 
     public int getId() {
         return id;

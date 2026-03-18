@@ -14,8 +14,12 @@ public class LigneCommande {
     private int id;
     private int quantite;
 
-
+      @ManyToOne
+     @JoinColumn(name = "produit_id")
     private Produit produit;
+
+    @ManyToOne
+    @JoinColumn(name = "commande_id")
     private Commande commande;
 
     public LigneCommande() {

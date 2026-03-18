@@ -18,8 +18,7 @@ public class Client {
     private String tel;
 
 
-    @OneToMany(mappedBy = "commande" , cascade = CascadeType.ALL)
-    @ToString.Exclude
+    @OneToMany(mappedBy = "client")
     private List<Commande> commandesList;
 
 
