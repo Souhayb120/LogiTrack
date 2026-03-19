@@ -3,6 +3,7 @@ package com.example.LogiTrack.Produit;
 import com.example.LogiTrack.ligneCommande.LigneCommande;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -19,7 +20,7 @@ public class Produit {
 
 
     @OneToMany(mappedBy = "produit")
-    private List<LigneCommande> ligneCommandes;
+    private List<LigneCommande> ligneCommandes = new ArrayList<>();
 
     public Produit() {
     }

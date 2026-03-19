@@ -2,10 +2,12 @@ package com.example.LogiTrack.Commande;
 
 import com.example.LogiTrack.Client.Client;
 import com.example.LogiTrack.ligneCommande.LigneCommande;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -21,10 +23,11 @@ public class Commande {
     @ManyToOne
     @JoinColumn(name = "client_id")
     @ToString.Exclude
+    @JsonIgnore
     private Client client;
 
     @OneToMany(mappedBy = "commande")
-    private List<LigneCommande> ligneCommandes;
+    private List<LigneCommande> ligneCommandes = new ArrayList<>();
 
     public Commande() {
     }

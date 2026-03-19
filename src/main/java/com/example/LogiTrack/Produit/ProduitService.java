@@ -17,15 +17,16 @@ public class ProduitService {
         produitRepo.save(produit);
     }
 
-    public List<Produit> afficherClients(){
+    public List<Produit> afficherProduits(){
         return  produitRepo.findAll();
     }
 
-    public void deleteClient(Produit produit){
+    public void deleteProduit(int id){
+        var produit = produitRepo.findById(id).orElse(null);
         produitRepo.delete(produit);
     }
 
-    public Produit afficherUnClient(int id){
+    public Produit afficherProduit(int id){
         return produitRepo.findById(id).orElse(null);
     }
 }

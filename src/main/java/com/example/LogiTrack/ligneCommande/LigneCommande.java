@@ -14,7 +14,7 @@ public class LigneCommande {
     private int id;
     private int quantite;
 
-      @ManyToOne
+    @ManyToOne
      @JoinColumn(name = "produit_id")
     private Produit produit;
 

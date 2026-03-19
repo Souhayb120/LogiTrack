@@ -19,6 +19,7 @@ public class Client {
 
 
     @OneToMany(mappedBy = "client")
+
     private List<Commande> commandesList;
 
 
