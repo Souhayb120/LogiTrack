@@ -1,8 +1,9 @@
-package com.example.LogiTrack.Client;
+package com.example.LogiTrack.services;
 
+import com.example.LogiTrack.Models.Client;
+import com.example.LogiTrack.Repositories.ClientRepo;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

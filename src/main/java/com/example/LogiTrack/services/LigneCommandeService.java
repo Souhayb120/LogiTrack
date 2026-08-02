@@ -1,15 +1,11 @@
-package com.example.LogiTrack.ligneCommande;
+package com.example.LogiTrack.services;
 
-import com.example.LogiTrack.Commande.Commande;
-import com.example.LogiTrack.Commande.CommandeRepo;
-import com.example.LogiTrack.Produit.Produit;
-import com.example.LogiTrack.Produit.ProduitRepo;
+import com.example.LogiTrack.Models.LigneCommande;
+import com.example.LogiTrack.Repositories.CommandeRepo;
+import com.example.LogiTrack.Repositories.LigneCommandeRepo;
+import com.example.LogiTrack.Repositories.ProduitRepo;
 import com.example.LogiTrack.exceptions.DataNotFound;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.zip.DataFormatException;
 
 @Service
 public class LigneCommandeService {

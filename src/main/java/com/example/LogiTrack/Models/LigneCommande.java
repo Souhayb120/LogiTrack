@@ -1,9 +1,6 @@
-package com.example.LogiTrack.ligneCommande;
+package com.example.LogiTrack.Models;
 
-import com.example.LogiTrack.Commande.Commande;
-import com.example.LogiTrack.Produit.Produit;
 import jakarta.persistence.*;
-import lombok.ToString;
 
 
 @Entity
@@ -21,7 +18,7 @@ public class LigneCommande {
     @ManyToOne
     @JoinColumn(name = "commande_id")
     private Commande commande;
-
+//composit id
     public LigneCommande() {
     }
 

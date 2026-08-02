@@ -1,6 +1,7 @@
-package com.example.LogiTrack.Produit;
+package com.example.LogiTrack.services;
 
-import com.example.LogiTrack.Client.Client;
+import com.example.LogiTrack.Models.Produit;
+import com.example.LogiTrack.Repositories.ProduitRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,6 +26,10 @@ public class ProduitService {
         var produit = produitRepo.findById(id).orElse(null);
         produitRepo.delete(produit);
     }
+
+     public List<Produit> findProduiByQuantite(int quantite){
+        return produitRepo.findByQuantiteStock(quantite);
+     }
 
     public Produit afficherProduit(int id){
         return produitRepo.findById(id).orElse(null);

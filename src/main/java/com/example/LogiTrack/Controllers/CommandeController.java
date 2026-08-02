@@ -1,8 +1,7 @@
-package com.example.LogiTrack.Commande;
+package com.example.LogiTrack.Controllers;
 
-import com.example.LogiTrack.Client.Client;
-import com.example.LogiTrack.Produit.Produit;
-import com.example.LogiTrack.Produit.ProduitService;
+import com.example.LogiTrack.services.CommandeService;
+import com.example.LogiTrack.Models.Commande;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

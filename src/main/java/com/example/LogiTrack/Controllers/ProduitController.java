@@ -1,8 +1,8 @@
-package com.example.LogiTrack.Produit;
+package com.example.LogiTrack.Controllers;
 
 
-import com.example.LogiTrack.Client.Client;
-import com.example.LogiTrack.Client.ClientService;
+import com.example.LogiTrack.Models.Produit;
+import com.example.LogiTrack.services.ProduitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +24,12 @@ public class ProduitController {
     @GetMapping
     public List<Produit> displayProduits(){
         return produitService.afficherProduits();
+    }
+
+
+    @GetMapping("/findQuantite/{q}")
+    public List<Produit> displayProduitsByQuantite(@PathVariable  int q){
+        return produitService.findProduiByQuantite(q);
     }
 
     @GetMapping("/{id}")

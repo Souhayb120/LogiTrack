@@ -1,7 +1,5 @@
-package com.example.LogiTrack.Commande;
+package com.example.LogiTrack.Models;
 
-import com.example.LogiTrack.Client.Client;
-import com.example.LogiTrack.ligneCommande.LigneCommande;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.ToString;

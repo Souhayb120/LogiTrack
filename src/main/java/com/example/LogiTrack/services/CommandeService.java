@@ -1,11 +1,10 @@
-package com.example.LogiTrack.Commande;
+package com.example.LogiTrack.services;
 
-import com.example.LogiTrack.Client.Client;
-import com.example.LogiTrack.Produit.Produit;
-import com.example.LogiTrack.Produit.ProduitRepo;
+import com.example.LogiTrack.Models.Commande;
+import com.example.LogiTrack.Repositories.CommandeRepo;
+import com.example.LogiTrack.Repositories.ProduitRepo;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 

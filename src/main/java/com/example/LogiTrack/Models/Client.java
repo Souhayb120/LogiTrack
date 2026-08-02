@@ -1,8 +1,6 @@
-package com.example.LogiTrack.Client;
+package com.example.LogiTrack.Models;
 
-import com.example.LogiTrack.Commande.Commande;
 import jakarta.persistence.*;
-import lombok.ToString;
 
 import java.util.List;
 

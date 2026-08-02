@@ -1,6 +1,5 @@
-package com.example.LogiTrack.Produit;
+package com.example.LogiTrack.Models;
 
-import com.example.LogiTrack.ligneCommande.LigneCommande;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

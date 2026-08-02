@@ -1,4 +1,6 @@
-package com.example.LogiTrack.Client;
+package com.example.LogiTrack.Controllers;
+import com.example.LogiTrack.services.ClientService;
+import com.example.LogiTrack.Models.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
