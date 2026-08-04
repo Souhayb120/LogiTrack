@@ -2,5 +2,6 @@ package com.example.LogiTrack.Enums;
 
 public enum Roles {
     ADMIN,
-    CLIENT
+    MANAGER,
+    AGENT
 }

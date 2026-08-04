@@ -1,10 +1,10 @@
 package com.example.LogiTrack.Repositories;
 
 import com.example.LogiTrack.Models.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.lang.ScopedValue;
 import java.util.Optional;
 
-public interface UserRepository {
-    Optional<UserEntity> findByUsername(String username);
+public interface UserRepository extends JpaRepository<UserEntity,Integer> {
+    Optional<UserEntity> findByUserName(String username);
 }

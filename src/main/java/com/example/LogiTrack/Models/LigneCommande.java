@@ -1,10 +1,17 @@
 package com.example.LogiTrack.Models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @Entity
-@Table(name = "ligneCommande")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class LigneCommande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,52 +25,5 @@ public class LigneCommande {
     @ManyToOne
     @JoinColumn(name = "commande_id")
     private Commande commande;
-//composit id
-    public LigneCommande() {
-    }
 
-    public LigneCommande(int quantite, Produit produit, Commande commande) {
-        this.quantite = quantite;
-        this.produit = produit;
-        this.commande = commande;
-    }
-
-    public LigneCommande(int id, int quantite, Produit produit, Commande commande) {
-        this.id = id;
-        this.quantite = quantite;
-        this.produit = produit;
-        this.commande = commande;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getQuantite() {
-        return quantite;
-    }
-
-    public void setQuantite(int quantite) {
-        this.quantite = quantite;
-    }
-
-    public Produit getProduit() {
-        return produit;
-    }
-
-    public void setProduit(Produit produit) {
-        this.produit = produit;
-    }
-
-    public Commande getCommande() {
-        return commande;
-    }
-
-    public void setCommande(Commande commande) {
-        this.commande = commande;
-    }
 }
